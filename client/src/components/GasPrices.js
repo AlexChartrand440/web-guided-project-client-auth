@@ -79,7 +79,7 @@ class GasPrices extends React.Component {
               </div>
               <div>
                 {gasPrices.map(price => (
-                  <div className="price-graph" key={price.date}>
+                  <div className="price-graph">
                     <div className="date">
                       <p>{price.date}</p>
                     </div>
