@@ -19,11 +19,10 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 
         // Otherwise, redirect to login
         else {
-          return <Redirect to="/login"
+          return <Redirect to="/login" />
+        }
       }
       }
-      }
-
     />
   )
 }
