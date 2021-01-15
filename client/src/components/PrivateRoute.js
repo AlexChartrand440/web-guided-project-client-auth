@@ -9,18 +9,20 @@ import { Redirect, Route } from 'react-router-dom';
 // take the component prop, rename it Component (capitalized so that it'll render in JSX) and assign the rest of the props to a variable called "rest"
 const PrivateRoute = ({ component: Component, ...rest }) => {
   return (
-    <Route render={(props) => {
-      // if the token is in localStorage, render the component
-      if (localStorage.getItem("token")) {
-        return <Component {...props} />
-      }
+    <Route
+      {...rest}
+      render={(props) => {
+        // if the token is in localStorage, render the component
+        if (localStorage.getItem("token")) {
+          return <Component {...props} />
+        }
 
-      // Otherwise, redirect to login
-      else {
-        return <Redirect to="/login"
+        // Otherwise, redirect to login
+        else {
+          return <Redirect to="/login"
       }
-    }
-    }
+      }
+      }
 
     />
   )
