@@ -7,7 +7,7 @@ import GasPrices from './components/GasPrices';
 
 import axios from 'axios';
 
-function App() {
+function App(props) {
   const logout = () => {
     localStorage.removeItem("token");
     props.history.push("/");
