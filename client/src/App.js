@@ -28,9 +28,7 @@ function App() {
           </li>
         </ul>
         <Switch>
-          <PrivateRoute exact path="/protected">
-            <GasPrices />
-          </PrivateRoute>
+          <PrivateRoute exact path="/protected" component={GasPrices} />
           <Route path="/login" component={Login} />
           <Route component={Login} />
         </Switch>
