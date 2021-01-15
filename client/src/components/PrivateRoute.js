@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from 'react-router-dom';
+import { Redirect, Route } from 'react-router-dom';
 
 // Private route requirements:
 // 1. It has the same API (interface) as <Route/>
@@ -15,6 +15,9 @@ const PrivateRoute = () => {
       }
 
       // Otherwise, redirect to login
+      else {
+        return <Redirect to="/login"
+      }
     }
     }
 
