@@ -45,7 +45,6 @@ class GasPrices extends React.Component {
     console.log(gasPrices);
     return (
       <div className="gas-prices">
-        <h1>{this.props.name}</h1>
         <div className="title-wrapper">
           <div className="title">
             <div className="inner-wrapper">

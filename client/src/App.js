@@ -28,7 +28,7 @@ function App(props) {
         </ul>
         <Switch>
           <PrivateRoute exact path="/protected">
-            <GasPrices name="Josh" />
+            <GasPrices />
           </PrivateRoute>
           <Route path="/login" component={Login} />
           <Route component={Login} />
