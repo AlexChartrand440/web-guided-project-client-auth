@@ -14,7 +14,7 @@ class GasPrices extends React.Component {
   }
 
   getData = () => {
-    axiosWithAuth.get("/data")
+    axiosWithAuth().get("/data")
       .then(res => {
         console.log(res);
         this.setState({
