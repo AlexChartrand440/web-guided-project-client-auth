@@ -8,11 +8,11 @@ import { Route } from 'react-router-dom';
 
 const PrivateRoute = () => {
   return (
-    <Route render={
-
+    <Route render={(props) => {
       // if the token is in localStorage, render the component
 
       // Otherwise, redirect to login
+    }
     }
 
     />
