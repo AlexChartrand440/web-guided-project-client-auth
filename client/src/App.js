@@ -10,9 +10,7 @@ import axios from 'axios';
 function App(props) {
   const logout = () => {
     localStorage.removeItem("token");
-    props.history.push("/");
   };
-
 
   return (
     <Router>
