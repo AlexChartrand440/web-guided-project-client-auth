@@ -7,7 +7,7 @@ import { Redirect, Route } from 'react-router-dom';
 // 3. Otherwise, redirect to the login page
 
 // take the component prop, rename it Component (capitalized so that it'll render in JSX) and assign the rest of the props to a variable called "rest"
-const PrivateRoute = ({ component, ...rest }) => {
+const PrivateRoute = ({ component: Component, ...rest }) => {
   return (
     <Route render={(props) => {
       // if the token is in localStorage, render the component
