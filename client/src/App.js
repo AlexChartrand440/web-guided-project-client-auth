@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import PrivateRoute from "./components/PrivateRoute";
+import { PrivateRoute } from "./components/PrivateRoute";
 
 import Login from './components/Login';
 import GasPrices from './components/GasPrices';
@@ -27,7 +27,9 @@ function App(props) {
           </li>
         </ul>
         <Switch>
-          <PrivateRoute exact path="/protected" component={GasPrices} />
+          <PrivateRoute exact path="/protected">
+            <GasPrices name="Josh" />
+          </PrivateRoute>
           <Route path="/login" component={Login} />
           <Route component={Login} />
         </Switch>
