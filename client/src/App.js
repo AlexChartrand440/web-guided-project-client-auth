@@ -8,7 +8,7 @@ import axios from 'axios';
 
 function App() {
   const logout = () => {
-    
+
   };
 
 
@@ -27,7 +27,7 @@ function App() {
           </li>
         </ul>
         <Switch>
-          <Route exact path="/protected" component={GasPrices} />
+          <Route exact path="/protected" component={GasPrices} foo="bar" />
           <Route path="/login" component={Login} />
           <Route component={Login} />
         </Switch>
