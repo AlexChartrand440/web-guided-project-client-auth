@@ -7,8 +7,9 @@ import { Route } from 'react-router-dom';
 // 3. Otherwise, redirect to the login page
 
 const PrivateRoute = () => {
-    return (
-        <Route
-        />
-    )
+  return (
+    <Route
+
+    />
+  )
 }
