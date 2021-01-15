@@ -21,10 +21,12 @@ class Login extends React.Component {
   login = e => {
     e.preventDefault();
     // hit the login API endpoint with the username and password in the request body
-    axios.post("http://localhost:5000/api/login", this.state.credentials)
-
-    // happy path: store the token from the response as a localStorage item called "token"
-
+    axios.post("http://localhost:5000/api/login", this.state.credentials).
+      then(res => {
+        // happy path: store the token from the response as a localStorage item called "token"
+        console.log(res)
+      })
+      .catch(err => console.log(err));
     // sad path: just log it for now
   };
 
